@@ -1,6 +1,7 @@
 const { app, BrowserWindow, Menu, shell, ipcMain } = require('electron');;
 const path = require('path');
 const url = require('url');
+const fs = require('fs');
 
 const makeMenuTemplate = require('./make-menu-template.js');
 
@@ -35,7 +36,6 @@ function createNewSettingsWindow() {
 }
 
 function createMainWindow() {
-
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1000,
@@ -88,12 +88,31 @@ function createMainWindow() {
     settingsWindow = null;
   });
 
+  mainWindow.on( 'unresponsive', function(event) {
+    // event.preventDefault();
+    // Dereference the window object, usually you would store windows
+    // in an array if your app supports multi windows, this is the time
+    // when you should delete the corresponding element.
+    // mainWindow = null;
+    // settingsWindow = null;
+  
+    fs.writeFileSync('test-debugging-unresponsive.txt', JSON.stringify(event,null,2))
+  });
+
+ 
+
+
 }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', createMainWindow);
+
+app.on('renderer-process-crashed', function(event, webContents, killed) {
+  console.log('renderer-process-crashed', event);
+  fs.writeFileSync('test-debugging-renderer-process-crashed.txt', event)
+});
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function() {
