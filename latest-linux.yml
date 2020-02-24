@@ -1,0 +1,9 @@
+version: 1.0.3-alpha.23
+files:
+  - url: digital-paper-edit-electron-1.0.3-alpha.23.AppImage
+    sha512: 0s7f82hkSPcg1rQZCAOEhQMz5OOXnOhBwY+e0LTXqeD279CYPUbfRdStUzgh+cm/HyDBROyVlpAZ6iXpyft+lQ==
+    size: 308922360
+    blockMapSize: 321548
+path: digital-paper-edit-electron-1.0.3-alpha.23.AppImage
+sha512: 0s7f82hkSPcg1rQZCAOEhQMz5OOXnOhBwY+e0LTXqeD279CYPUbfRdStUzgh+cm/HyDBROyVlpAZ6iXpyft+lQ==
+releaseDate: '2020-02-22T04:12:55.209Z'

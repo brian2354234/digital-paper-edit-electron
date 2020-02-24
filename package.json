@@ -155,7 +155,7 @@
     "bootstrap-css-only": "^4.3.1",
     "deepspeech-node-wrapper": "^1.0.6",
     "diskdb": "^0.1.17",
-    "electron-updater": "^4.1.2",
+    "electron-updater": "^4.2.2",
     "ffmpeg-static-electron": "^2.0.1",
     "ffprobe-static-electron": "^2.0.0",
     "fluent-ffmpeg": "^2.1.2",

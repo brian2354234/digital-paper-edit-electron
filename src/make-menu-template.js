@@ -91,6 +91,24 @@ makeMenuTemplate = ({ app, createNewSettingsWindow, createMainWindow, checkForUp
       ]
     },
     {
+      label: 'Check for updates',
+      submenu: [
+        // {
+        //     label: "Project Page",
+        //     click() {
+        //         require("electron").shell.openExternal("https://autoEdit.io");
+        //         }
+        // },
+        {
+          label: 'Check for updates',
+          click() {
+            checkForUpdates();
+          },
+          // accelerator: 'CmdOrCtrl+S+T'
+        }
+      ]
+    },
+    {
       role: 'help',
       submenu: [
         // {

@@ -2,6 +2,7 @@ const { app, BrowserWindow, Menu, shell, ipcMain } = require('electron');
 const path = require('path');
 const url = require('url');
 const makeMenuTemplate = require('./make-menu-template.js');
+const checkForUpdates = require('./updater.js').checkForUpdates;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -82,7 +83,8 @@ function createMainWindow() {
   const template = makeMenuTemplate({
     app,
     createNewSettingsWindow,
-    createMainWindow
+    createMainWindow,
+    checkForUpdates
   });
 
   Menu.setApplicationMenu(Menu.buildFromTemplate(template));

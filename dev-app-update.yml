@@ -1,0 +1,8 @@
+provider: "github"
+repo: "digital-paper-edit-electron"
+# repo: https://github.com/pietrop/digital-paper-edit-electron
+owner: "pietrop"
+vPrefixedTagName: true
+host: "github.com "
+protocol: "https"
+releaseType: "prerelease"
